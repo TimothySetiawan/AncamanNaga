@@ -1186,7 +1186,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Erwarteter OTT",
+              "name": "1. Auth challenge (TLS)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1199,14 +1199,7 @@
               "threats": []
             },
             "labels": [
-              {
-                "attrs": {
-                  "label": {
-                    "text": "1. Auth Challenge"
-                  }
-                },
-                "position": 0.5
-              }
+              "1. Auth challenge (TLS)"
             ],
             "id": "2503a360-01b6-4464-b35f-42c6fb583348",
             "source": {
@@ -1216,6 +1209,10 @@
               "cell": "94f68ce7-aa88-45a4-ba41-c0b62d6a959c"
             },
             "vertices": [
+              {
+                "x": 420,
+                "y": -10
+              },
               {
                 "x": 440,
                 "y": -10
@@ -1242,7 +1239,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "2. Weiterleitung\nTelefonnummer",
+              "name": "Erwarteter OTT (TLS)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1255,14 +1252,7 @@
               "threats": []
             },
             "labels": [
-              {
-                "attrs": {
-                  "label": {
-                    "text": "Erwarteter OTT"
-                  }
-                },
-                "position": 0.5
-              }
+              "Erwarteter OTT (TLS)"
             ],
             "id": "63356151-e316-4a82-8224-9a7c729cfbee",
             "source": {
@@ -1271,7 +1261,12 @@
             "target": {
               "cell": "a1d5bbe6-465f-43bb-bd96-7ce687db37aa"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 450,
+                "y": 110
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1293,7 +1288,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "2a. Telefonnummer",
+              "name": "Telefonnummer, OTT (TLS)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -2189,7 +2184,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "",
+              "name": "2. Weiterleitung\nTelefonnummer (TLS)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -2248,7 +2243,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Telefonnummer, OTT",
+              "name": "Anwort (TLS)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
