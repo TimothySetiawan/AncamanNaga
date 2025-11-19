@@ -1195,9 +1195,9 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "isBidirectional": false,
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isPublicNetwork": false,
-              "protocol": "",
+              "protocol": "TLS",
               "threats": []
             },
             "labels": [
@@ -1248,9 +1248,9 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "isBidirectional": false,
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isPublicNetwork": false,
-              "protocol": "",
+              "protocol": "TLS",
               "threats": []
             },
             "labels": [
@@ -2950,6 +2950,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 15,
             "ports": {
               "groups": {
                 "top": {
@@ -3033,7 +3034,6 @@
               ]
             },
             "id": "0abce0e5-1d9c-471d-b7de-ed8a2820f7d1",
-            "zIndex": 15,
             "data": {
               "type": "tm.Actor",
               "name": "Management",
