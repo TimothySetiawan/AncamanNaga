@@ -287,19 +287,12 @@
               },
               "handlesCardPayment": null,
               "handlesGoodsOrServices": null
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
             "position": {
               "x": 488,
-              "y": -11.999999999999922
+              "y": -7
             },
             "size": {
               "width": 130,
@@ -593,6 +586,13 @@
               "handlesCardPayment": null,
               "handlesGoodsOrServices": null,
               "isWebApplication": null
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -2661,7 +2661,7 @@
                   "severity": "TBD",
                   "type": "Repudiation",
                   "description": "mit ausreichenden Rechten (z.B von Malicious Insiders oder einem kompromittierten Admin-Konto)\n\nCAPEC-93: Log Injection-Tampering-Forging: injects, manipulates or forges malicious log entries in the log file, allowing them to mislead a log audit.\n\nT1565: Data Manipulation: insert, delete, or manipulate data in order to influence external outcomes or hide activity.",
-                  "mitigation": "Log DB sollte read-only außerhalb des 2-FaktorAuthdienst",
+                  "mitigation": "Logdatei sollte nicht einfach manipulierbar:\nLog DB sollte read-only außerhalb des 2-FaktorAuthdienst",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 105,
@@ -2670,7 +2670,7 @@
               ],
               "threatFrequency": {
                 "tampering": 1,
-                "repudiation": 4,
+                "repudiation": 5,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
