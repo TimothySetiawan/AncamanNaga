@@ -268,7 +268,7 @@
                   "severity": "TBD",
                   "type": "Elevation of privilege",
                   "description": "Alle Applikationen mit ausreichenden Rechten können die Daten von AllSecure Applikationen in der SD-Karte lesen.\n\nCAPEC-150: An adversary exploits well-known locations for resources for the purposes of undermining the security of the target. \n\nT1005: Adversaries may search local system sources, such as file systems, configuration files, local databases, virtual machine files, or process memory, to find files of interest and sensitive data prior to Exfiltration.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Applikationdaten sollte nicht in einer SD-Karte gespeichert werden",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 108,
@@ -283,10 +283,17 @@
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 5
+                "elevationOfPrivilege": 6
               },
               "handlesCardPayment": null,
               "handlesGoodsOrServices": null
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -409,7 +416,7 @@
                   "severity": "TBD",
                   "type": "Denial of service",
                   "description": "Keine Redundanz für diese Dienst. Zum Beispiel wegen eines Brands.\n\nCAPEC-547: Physical Destruction of Device or Component\n\nT0879: Damage to Property",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Offsite backup",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 107,
@@ -428,9 +435,10 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 3,
+                "denialOfService": 4,
                 "elevationOfPrivilege": 0
-              }
+              },
+              "handlesGoodsOrServices": null
             }
           },
           {
@@ -553,7 +561,7 @@
                   "severity": "TBD",
                   "type": "Spoofing",
                   "description": "Weil der Schlüssel in eine ungesicherte/unverschlüsselte Datei gespeichert ist, kann man den Schlüssel kopieren.\n\nWenn statischer symmetrischer Schlüssel kompromittiert wird, kann die API Gateway gespooft werden. Sensitive Daten, die von der 2-FaktorAuth gesendet werden, werden dann kompromittiert.\n\nCAPEC-151: Identity Spoofing: assuming (i.e., taking on) the identity of some other entity (human or non-human) and then using that identity to accomplish a goal.\n\nT1649: Steal or Forge Authentication Certificates: steal or forge certificates used for authentication to access remote systems or resources.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Schlüssel muss gesichert werden. (Verschlüsselung der Konfig-Datei).",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 103,
@@ -566,7 +574,7 @@
                   "severity": "TBD",
                   "type": "Information disclosure",
                   "description": "Unverschlüsselte Konfiguration Datei\n\nCAPEC-180: Exploiting Incorrectly Configured Access Control Security Levels.\n\nT1552: Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Konfigurationsdatei sollte verschlüsselt werden.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 106,
@@ -575,10 +583,10 @@
               ],
               "hasOpenThreats": true,
               "threatFrequency": {
-                "spoofing": 3,
+                "spoofing": 4,
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 3,
+                "informationDisclosure": 4,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               },
@@ -2652,8 +2660,8 @@
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Repudiation",
-                  "description": "durch SQL-Injection oder von Malicious Insiders\n\nCAPEC-93: Log Injection-Tampering-Forging: injects, manipulates or forges malicious log entries in the log file, allowing them to mislead a log audit.\n\nT1565: Data Manipulation: insert, delete, or manipulate data in order to influence external outcomes or hide activity.",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "mit ausreichenden Rechten (z.B von Malicious Insiders oder einem kompromittierten Admin-Konto)\n\nCAPEC-93: Log Injection-Tampering-Forging: injects, manipulates or forges malicious log entries in the log file, allowing them to mislead a log audit.\n\nT1565: Data Manipulation: insert, delete, or manipulate data in order to influence external outcomes or hide activity.",
+                  "mitigation": "Log DB sollte read-only außerhalb des 2-FaktorAuthdienst",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 105,
@@ -2662,17 +2670,10 @@
               ],
               "threatFrequency": {
                 "tampering": 1,
-                "repudiation": 3,
+                "repudiation": 4,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -3047,7 +3048,7 @@
                   "severity": "TBD",
                   "type": "Tampering",
                   "description": "Der wöchentliche Report wird zu einem Angriffer statt zu Management geschickt. Sensitive Daten über die Dienste werden offengelegt.\n\nCAPEC-165: File Manipulation: An attacker modifies file contents or attributes (such as extensions or names) of files in a manner to cause incorrect processing by an application\n\nT1565: Data Manipulation: insert, delete, or manipulate data in order to influence external outcomes or hide activity",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Admin-Rechte sollten notwendig sein, um diese Konfigurationsdatei zu ändern",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 104,
@@ -3056,7 +3057,7 @@
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 2,
+                "tampering": 3,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
