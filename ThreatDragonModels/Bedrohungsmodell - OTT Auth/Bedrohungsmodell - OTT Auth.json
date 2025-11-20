@@ -283,7 +283,7 @@
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 6
+                "elevationOfPrivilege": 7
               },
               "handlesCardPayment": null,
               "handlesGoodsOrServices": null
@@ -428,7 +428,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 4,
+                "denialOfService": 5,
                 "elevationOfPrivilege": 0
               },
               "handlesGoodsOrServices": null
@@ -567,7 +567,7 @@
                   "severity": "TBD",
                   "type": "Information disclosure",
                   "description": "Unverschlüsselte Konfiguration Datei\n\nCAPEC-180: Exploiting Incorrectly Configured Access Control Security Levels.\n\nT1552: Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system.",
-                  "mitigation": "Konfigurationsdatei sollte verschlüsselt werden.",
+                  "mitigation": "Konfigurationdatei sollte nicht offentlich zugreifbar:\nKonfigurationsdatei sollte verschlüsselt werden.\n",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 106,
@@ -576,23 +576,16 @@
               ],
               "hasOpenThreats": true,
               "threatFrequency": {
-                "spoofing": 4,
+                "spoofing": 6,
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 4,
+                "informationDisclosure": 7,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               },
               "handlesCardPayment": null,
               "handlesGoodsOrServices": null,
               "isWebApplication": null
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -2926,7 +2919,7 @@
           {
             "position": {
               "x": 250,
-              "y": -194
+              "y": -190
             },
             "size": {
               "width": 120,
@@ -3048,7 +3041,7 @@
                   "severity": "TBD",
                   "type": "Tampering",
                   "description": "Der wöchentliche Report wird zu einem Angriffer statt zu Management geschickt. Sensitive Daten über die Dienste werden offengelegt.\n\nCAPEC-165: File Manipulation: An attacker modifies file contents or attributes (such as extensions or names) of files in a manner to cause incorrect processing by an application\n\nT1565: Data Manipulation: insert, delete, or manipulate data in order to influence external outcomes or hide activity",
-                  "mitigation": "Admin-Rechte sollten notwendig sein, um diese Konfigurationsdatei zu ändern",
+                  "mitigation": "Konfigurationsdatei sollte nicht einfach verändert werden:\nAdmin-Rechte sollten notwendig sein, um diese Konfigurationsdatei zu ändern",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 104,
@@ -3057,7 +3050,7 @@
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 3,
+                "tampering": 5,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
