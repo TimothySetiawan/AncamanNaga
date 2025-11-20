@@ -409,7 +409,7 @@
                   "severity": "High",
                   "type": "Denial of service",
                   "description": "Keine Redundanz für diese Dienst. Zum Beispiel wegen eines Brands.\n\nCAPEC-547: Physical Destruction of Device or Component\n\nT0879: Damage to Property\n\nD: 10 / R: 8 / E: 8 / A: 10 / DREA: 36",
-                  "mitigation": "Braucht Redundanz.\nOffsite backup\n\nMatrix, D3-RF: Restoring a file for an entity to access.\nD: 6 / R: 8 / E: 8 / A: 10 / DREA: 32",
+                  "mitigation": "Braucht Redundanz.\nOffsite backup\n\nMatrix, D3-RS: Restore Software\n\nD: 6 / R: 8 / E: 8 / A: 10 / DREA: 32",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 107,
@@ -428,7 +428,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 10,
+                "denialOfService": 11,
                 "elevationOfPrivilege": 0
               },
               "handlesGoodsOrServices": null
@@ -586,13 +586,6 @@
               "handlesCardPayment": null,
               "handlesGoodsOrServices": null,
               "isWebApplication": null
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
