@@ -2652,7 +2652,7 @@
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Repudiation",
-                  "description": "Mit SQL Injection oder von Malicious Insiders",
+                  "description": "durch SQL-Injection oder von Malicious Insiders\n\nCAPEC-93: Log Injection-Tampering-Forging: injects, manipulates or forges malicious log entries in the log file, allowing them to mislead a log audit.\n\nT1565: Data Manipulation: insert, delete, or manipulate data in order to influence external outcomes or hide activity.",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
@@ -2662,7 +2662,7 @@
               ],
               "threatFrequency": {
                 "tampering": 1,
-                "repudiation": 2,
+                "repudiation": 3,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
