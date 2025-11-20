@@ -567,7 +567,7 @@
                   "severity": "Low",
                   "type": "Information disclosure",
                   "description": "Unverschlüsselte Konfiguration Datei\n\nCAPEC-180: Exploiting Incorrectly Configured Access Control Security Levels.\n\nT1552: Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system.\n\nD: 8 / R: 9 / E: 8 / A: 4 / DREA: 29",
-                  "mitigation": "Konfigurationsdatei sollte nicht einfach verändert werden:\nAdmin-Rechte sollten notwendig sein, um diese Konfigurationsdatei zu ändern\n\nd3fend: D3-SCP: Restricting system configuration modifications to a specific user or group of users.\n\nD: 7 / R: 4 / E: 2 / A: 8 / neue DREA: 21\n",
+                  "mitigation": "Konfigurationsdatei sollte nicht einfach verändert werden:\nAdmin-Rechte sollten notwendig sein, um diese Konfigurationsdatei zu ändern\n\nD3fend: D3-FE: Encrypting a file using a cryptographic key.\n\nD: 7 / R: 4 / E: 2 / A: 8 / neue DREA: 21\n",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 106,
@@ -579,7 +579,7 @@
                 "spoofing": 12,
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 12,
+                "informationDisclosure": 13,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               },
