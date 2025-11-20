@@ -409,7 +409,7 @@
                   "severity": "TBD",
                   "type": "Denial of service",
                   "description": "Keine Redundanz für diese Dienst. Zum Beispiel wegen eines Brands.\n\nCAPEC-547: Physical Destruction of Device or Component\n\nT0879: Damage to Property",
-                  "mitigation": "Offsite backup",
+                  "mitigation": "Braucht Redundanz.\nOffsite backup",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 107,
@@ -428,10 +428,17 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 5,
+                "denialOfService": 6,
                 "elevationOfPrivilege": 0
               },
               "handlesGoodsOrServices": null
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
