@@ -1226,8 +1226,8 @@
                 "y": -204
               },
               {
-                "x": 570,
-                "y": -260
+                "x": 600,
+                "y": -370
               },
               {
                 "x": 290,
@@ -2404,8 +2404,8 @@
           },
           {
             "position": {
-              "x": 309,
-              "y": -385
+              "x": 458.5,
+              "y": -310
             },
             "size": {
               "width": 112.5,
@@ -2540,6 +2540,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 16,
             "ports": {
               "groups": {
                 "top": {
@@ -2623,7 +2624,6 @@
               ]
             },
             "id": "089226a9-f539-4e4b-8ea4-28e1f5f67f6d",
-            "zIndex": 16,
             "data": {
               "type": "tm.Process",
               "name": "Allsecure\nOTT Service",
